@@ -16,13 +16,16 @@ export const poiMemStore = {
 
   async getPoiById(id) {
     const list = pois.find((poi) => poi._id === id);
-    list.categories = await categoryMemStore.getCategoriesByPoiId(list._id);
-    return list;
+    if(list) {
+      list.categorys = await categoryMemStore.getCategorysByPoiId(list._id)
+      return list;
+    }
+    return null;
   },
 
   async deletePoiById(id) {
     const index = pois.findIndex((poi) => poi._id === id);
-    pois.splice(index, 1);
+    if (index !== -1) pois.splice(index, 1);
   },
 
   async deleteAllPois() {
