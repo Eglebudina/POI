@@ -26,3 +26,30 @@ export const maggie = {
     },
   ];
   
+  export const poiShow = {
+    title: "Poi favourites"
+  };
+  
+  export const testPois = [
+    {
+      name: "Carrauntoohil",
+      description: " Climbing route, Difficult",
+      latitude: 51.9990,
+      longitude: 9.7432,
+      user: "->users.maggie"
+    },
+    {
+      name: "The Glen of Aherlow",
+      description: " The Trek to Lough Curra, Medium",
+      latitude: 52.4169,
+      longitude: 8.1444,
+      user: "->users.maggie"
+    },
+    {
+      name: "Errigal Mountain",
+      description: " The Trek to Donegal skyline, Medium",
+      latitude: 55.0343,
+      longitude: 8.1130,
+      user: "->users.maggie"
+    }
+  ];

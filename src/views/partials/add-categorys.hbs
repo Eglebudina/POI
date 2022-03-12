@@ -1,17 +1,9 @@
 <form class="box" action="/poi/{{poi._id}}/addcategory" method="POST">
   <label>Enter Category Details:</label>
   <div class="field is-horizontal">
-    <div class="field-body">
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Title" name="title">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter lat" name="lat">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter lng" name="lng">
-      </div>
-    </div>
+    <label> Category name</label>
+    <input type="text" name="name" placeholder="Type POI here" required >
+    
   </div>
-  <button class="button is-primary">Add Category</button>
+  <button class="button is-primary" value="submit">Add Category</button>
 </form>
