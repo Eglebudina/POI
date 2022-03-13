@@ -71,3 +71,5 @@ export const maggie = {
       user: "->users.maggie"
     }
   ];
+
+  export const serviceUrl = "http://localhost:3000";
