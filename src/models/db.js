@@ -7,6 +7,7 @@ import { categoryJsonStore } from "./json/category-json-store.js";
 import { connectMongo } from "./mongo/connect.js";
 import { userMongoStore } from "./mongo/user-mongo-store.js";
 import { poiMongoStore } from "./mongo/poi-mongo-store.js";
+import { categoryMongoStore } from "./mongo/category-mongo-store.js";
 
 export const db = {
   userStore: null,
@@ -23,6 +24,7 @@ export const db = {
       case "mongo":
         this.userStore = userMongoStore;
         this.poiStore = poiMongoStore;
+        this.categoryStore = categoryMongoStore;
         connectMongo();
         break;
       default:

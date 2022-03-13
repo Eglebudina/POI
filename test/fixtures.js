@@ -27,8 +27,26 @@ export const maggie = {
   ];
   
   export const poiShow = {
-    title: "Poi favourites"
+    name: "Poi favourites"
   };
+
+  export const categoryShow = {
+    name: "Category favourites"
+  };
+
+  export const cat1 = {
+    name: "Category"
+  };
+
+  export const cat2 = {
+    name: "Kerry"
+  };
+
+  export const testCategory = [
+    {name: "Kerry"},
+    {name: "Donegal"},
+    {name: "Wicklow"}
+  ];
   
   export const testPois = [
     {
