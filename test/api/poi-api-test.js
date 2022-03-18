@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { poiService } from "./poi-service";
+import { poiService } from "./poi-service.js";
 import { assertSubset } from "../test-utils.js";
 import { maggie, poiShow, testPois } from "../fixtures.js";
 
