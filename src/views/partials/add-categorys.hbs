@@ -1,9 +1,12 @@
-<form class="box" action="/poi/{{poi._id}}/addcategory" method="POST">
-  <label>Enter Category Details:</label>
-  <div class="field is-horizontal">
-    <label> Category name</label>
-    <input type="text" name="name" placeholder="Type POI here" required >
-    
-  </div>
-  <button class="button is-primary" value="submit">Add Category</button>
-</form>
+<section class="section">
+    <h2><i class="icon"></i>Add Category</h2>
+
+    <form class="form" action="/add-category" method="POST">
+        <div class="field">
+            <label>Category Name</label>
+            <input type="text" name="name" placeholder="Type your POI a name here" required>
+        </div>
+        <button class="button" value="submit">Add Category</button>
+    </form>
+
+</section>

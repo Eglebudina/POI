@@ -1,0 +1,47 @@
+<section class="columns">
+    <div class="row">
+        <div class="column"><i class="icon"></i></div>
+        <div class="column"><h2>Update Point Of Interst</h2></div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <form class="form" action="/update-poi/{{poi._id}}" method="POST">
+                <div class="field">
+                    <label>Name of POI</label>
+                    <input type="text" name="name" value="{{poi.name}}" required>
+                </div>
+                <div class="field">
+                    <label>Category</label>
+                    <select name="category" class="dropdown" value="{{poi.category.name}}">
+                        <option value="{{poi.category.name}}"></option>
+                        {{#each categorys}}
+                            <option value="{{name}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <input type="text" name="description" value="{{poi.description}}"/>
+                </div>
+                <div class="one field">
+                    <label>Location</label>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Longitude</label>
+                            <input type="number" name="longitude" step="any" value="{{poi.longitude}}" required>
+                        </div>
+                        <div class="field">
+                            <label>Latitude</label>
+                            <input type="number" name="latitude" step="any" value="{{poi.latitude}}" required>
+                        </div>
+                    </div>
+                </div>
+                <section class="columns">
+                    <div class="column">
+                        <button class="button" value="Submit">UPDATE</button>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+</section>

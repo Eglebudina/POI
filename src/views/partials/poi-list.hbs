@@ -1,15 +1,13 @@
-{{#each pois}}
-  <div class="box box-link-hover-shadow">
-    <h2 class="title">
-      {{name}}
-    </h2>
-    <a href="/poi/{{_id}}" class="button">
-      <span class="icon is-small">
-        <i class="fas fa-folder-open"></i>
-      </span>
-    </a>
-    <a href="/dashboard/deletepoi/{{_id}}" class="button">
-      <i class="fas fa-trash"></i>
-    </a>
-  </div>
-{{/each}}
+<section class="section">
+    <div class="columns">
+        <aside class="column">
+            <img src="../images/sample.jpg" class="image"/>
+        </aside>
+        <article class="column">
+            <div class="column">
+                {{> filter-category-home}}
+            </div class="column">
+                {{> poi-table }}
+        </article>
+    </div>
+</section>

@@ -1,6 +1,14 @@
+
+
 {{> menu active="dashboard"}}
 
-<section class="section">
-  {{> poi-list}}
-  {{> poi-add}}
+<section class="columns">
+    <div class="column">
+        <h2><i class="teal large hiking icon"></i>List of {{firstName}} {{lastName}}'s Points Of Interest</h2>
+    </div>
+    {{> poi-list}}
+    <div class="column"></div>
+    {{> poi-add}}
 </section>
+
+
