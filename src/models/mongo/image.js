@@ -1,7 +1,7 @@
 import Mongoose from "mongoose";
 /*
 Image Schema stores images public id, url and points to
-the Poi associated with
+the Category associated with
  */
 const { Schema } = Mongoose;
 
@@ -10,7 +10,7 @@ const imageSchema = new Schema({
   url: String,
   poiid: {
     type: Schema.Types.ObjectId,
-    ref: "Poi",
+    ref: "Category",
   },
 });
 

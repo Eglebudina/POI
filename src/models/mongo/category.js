@@ -4,9 +4,9 @@ const { Schema } = Mongoose;
 
 const categorySchema = new Schema({
   name: String,
-  poiid: {
+  userid: {
     type: Schema.Types.ObjectId,
-    ref: "Poi",
+    ref: "User",
   },
 });
 

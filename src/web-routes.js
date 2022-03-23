@@ -1,7 +1,8 @@
+import { aboutController } from "./controllers/about-controller.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
-import { aboutController } from "./controllers/about-controller.js";
-import { poiController } from "./controllers/poi-controller.js";
+import { categoryController } from "./controllers/category-controller.js";
+import { placeController } from "./controllers/place-controller.js";
 
 export const webRoutes = [
   { method: "GET", path: "/", config: accountsController.index },
@@ -14,12 +15,15 @@ export const webRoutes = [
   { method: "GET", path: "/about", config: aboutController.index },
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
-  { method: "POST", path: "/dashboard/addpoi", config: dashboardController.addPoi },
-  { method: "GET", path: "/dashboard/deletepoi/{id}", config: dashboardController.deletePoi },
+  { method: "POST", path: "/dashboard/addcategory", config: dashboardController.addCategory },
+  { method: "GET", path: "/dashboard/deletecategory/{id}", config: dashboardController.deleteCategory },
 
-  { method: "GET", path: "/poi/{id}", config: poiController.index },
-  { method: "POST", path: "/poi/{id}/addcategory", config: poiController.addCategory },
-  { method: "GET", path: "/poi/{id}/deletecategory/{categoryid}", config: poiController.deleteCategory },
+  { method: "GET", path: "/category/{id}", config: categoryController.index },
+  { method: "POST", path: "/category/{id}/addplace", config: categoryController.addPlace },
+  { method: "GET", path: "/category/{id}/deleteplace/{placeid}", config: categoryController.deletePlace },
 
-  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } }
+  { method: "GET", path: "/place/{id}/editplace/{placeid}", config: placeController.index },
+  { method: "POST", path: "/place/{id}/updateplace/{placeid}", config: placeController.update },
+
+  { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } },
 ];

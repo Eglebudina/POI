@@ -1,4 +1,5 @@
 import { v4 } from "uuid";
+import { placeMemStore } from "./place-mem-store.js";
 
 let categorys = [];
 
@@ -7,37 +8,31 @@ export const categoryMemStore = {
     return categorys;
   },
 
-  async addCategory(poiId, category) {
+  async addCategory(category) {
     category._id = v4();
-    category.poiid = poiId;
     categorys.push(category);
     return category;
   },
 
-  async getCategorysByPoiId(id) {
-    return categorys.filter((category) => category.poiid === id);
-  },
-
   async getCategoryById(id) {
-    return categorys.find((category) => category._id === id);
+    const list = categorys.find((category) => category._id === id);
+    if (list) {
+      list.places = await placeMemStore.getPlacesByCategoryId(list._id);
+      return list;
+    }
+    return null;
   },
 
-  async getPoiCategorys(poiId) {
-    return categorys.filter((category) => category.poiid === poiId);
+  async getUserCategorys(userid) {
+    return categorys.filter((category) => category.userid === userid);
   },
 
-  async deleteCategory(id) {
+  async deleteCategoryById(id) {
     const index = categorys.findIndex((category) => category._id === id);
-    categorys.splice(index, 1);
+    if (index !== -1) categorys.splice(index, 1);
   },
 
   async deleteAllCategorys() {
     categorys = [];
-  },
-
-  async updateCategory(category, updatedCategory) {
-    category.title = updatedCategory.title;
-    category.artist = updatedCategory.artist;
-    category.duration = updatedCategory.duration;
   },
 };

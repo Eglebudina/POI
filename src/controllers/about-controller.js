@@ -2,7 +2,7 @@ export const aboutController = {
     index: {
       handler: function (request, h) {
         const viewData = {
-          title: "About Poi",
+          title: "About Category",
         };
         return h.view("about-view", viewData);
       },

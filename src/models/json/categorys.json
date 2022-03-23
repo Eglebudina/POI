@@ -1,53 +1,9 @@
 {
   "categorys": [
     {
-      "title": "Piano Sonata No. 3",
-      "artist": "Beethoven",
-      "duration": 12,
-      "_id": "7687bdff-fd61-4853-854c-10cedfee61a6",
-      "poiid": "b59ca3dc-68dc-40d5-bf7a-ef29a88a85f0"
-    },
-    {
-      "title": "Piano Sonata No. 7",
-      "artist": "Beethoven",
-      "duration": 23,
-      "_id": "3ed61912-8f87-407b-bd58-f911cffe92aa",
-      "poiid": "b59ca3dc-68dc-40d5-bf7a-ef29a88a85f0"
-    },
-    {
-      "title": "Piano Sonata No. 10",
-      "artist": "Beethoven",
-      "duration": 54,
-      "_id": "2b02c255-84f1-43b1-b80e-15af7fd7b6d0",
-      "poiid": "b59ca3dc-68dc-40d5-bf7a-ef29a88a85f0"
-    },
-    {
-      "title": "ww",
-      "artist": "w",
-      "duration": 0,
-      "_id": "1c64dab2-1147-4cfa-b6e8-763e29bb0473",
-      "poiid": "d178e59a-04be-42a6-ae9f-c64fb9e16023"
-    },
-    {
-      "title": "Piano Sonata No. 7",
-      "artist": "Beethoven",
-      "duration": 54,
-      "_id": "6a33eced-3f76-4e58-a72b-7981ff527dbe",
-      "poiid": "da614dae-4c25-4c8e-8d35-28ffcbebbea6"
-    },
-    {
-      "title": "Cliff walk",
-      "artist": "greystones",
-      "duration": null,
-      "_id": "1f6d1eca-bd25-4342-a8c9-d6cb0b0900d9",
-      "poiid": "da614dae-4c25-4c8e-8d35-28ffcbebbea6"
-    },
-    {
-      "title": "test",
-      "artist": "kilkea",
-      "duration": null,
-      "_id": "e5b2ad20-d61d-4b90-853b-5ef48014ff2a",
-      "poiid": "da614dae-4c25-4c8e-8d35-28ffcbebbea6"
+      "name": "Kerry",
+      "userid": "e977583f-0f72-44bb-bd08-a7b2231f4a46",
+      "_id": "df11a3d4-0644-42ee-a38e-853ef2a860b1"
     }
   ]
 }
