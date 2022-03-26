@@ -10,7 +10,7 @@ export const UserCredentialsSpec = Joi.object()
   .label("UserCredentials");
 
 export const UserSpec = UserCredentialsSpec.keys({
-  firstName: Joi.string().example("Homer").required(),
+  firstName: Joi.string().example("Maggie").required(),
   lastName: Joi.string().example("Simpson").required(),
 }).label("UserDetails");
 
@@ -23,9 +23,10 @@ export const UserArray = Joi.array().items(UserSpecPlus).label("UserArray");
 
 export const PlaceSpec = Joi.object()
   .keys({
-    title: Joi.string().required().example("Piano Sonata No. 7"),
-    artist: Joi.string().required().example("Beethoven"),
-    duration: Joi.number().allow("").optional().example(12),
+    name: Joi.string().required().example("Carrauntoohil"),
+    description: Joi.string().required().example("Climbing route, Difficult"),
+    latitude: Joi.number().allow("").optional().example(51.9990),
+    longitude: Joi.number().allow("").optional().example(9.7432),
     categoryid: IdSpec,
   })
   .label("Place");
@@ -39,7 +40,7 @@ export const PlaceArraySpec = Joi.array().items(PlaceSpecPlus).label("PlaceArray
 
 export const CategorySpec = Joi.object()
   .keys({
-    title: Joi.string().required().example("Beethoven Sonatas"),
+    name: Joi.string().required().example("Kerry"),
     userid: IdSpec,
     places: PlaceArraySpec,
   })

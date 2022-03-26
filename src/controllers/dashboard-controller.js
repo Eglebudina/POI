@@ -25,11 +25,11 @@ export const dashboardController = {
     },
     handler: async function (request, h) {
       const loggedInUser = request.auth.credentials;
-      const newPlayList = {
+      const newCategory = {
         userid: loggedInUser._id,
-        title: request.payload.title,
+        name: request.payload.name,
       };
-      await db.categoryStore.addCategory(newPlayList);
+      await db.categoryStore.addCategory(newCategory);
       return h.redirect("/dashboard");
     },
   },

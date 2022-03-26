@@ -34,7 +34,7 @@ suite("Category Model tests", () => {
     assertSubset(show, category);
   });
 
-  test("delete One Playist - success", async () => {
+  test("delete One Category - success", async () => {
     const id = testCategorys[0]._id;
     await db.categoryStore.deleteCategoryById(id);
     const returnedCategorys = await db.categoryStore.getAllCategorys();
