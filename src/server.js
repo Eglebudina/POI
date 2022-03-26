@@ -74,8 +74,8 @@ async function init() {
 
   server.auth.strategy("session", "cookie", {
     cookie: {
-      name: process.env.cookie_name,
-      password: process.env.cookie_password,
+      name: process.env.cookie.name,
+      password: process.env.cookie.password,
       isSecure: false
     },
     redirectTo: "/",
