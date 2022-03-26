@@ -1,0 +1,28 @@
+{
+  "places": [
+    {
+      "name": "Carrauntoohil",
+      "description": "Climbing route, Difficult",
+      "latitude": 51.9990,
+      "longitude": 9.7432,
+      "_id": "6205536e-65ce-4bb3-ad92-e81abdc53849",
+      "categoryid": "df11a3d4-0644-42ee-a38e-853ef2a860b1"
+    },
+    {
+      "name": "The_Glen_of_Aherlow",
+      "description": "The Trek to Lough Curra, Medium",
+      "latitude": 52.4169,
+      "longitude": 8.1444,
+      "_id": "27d82592-e583-463a-9894-e61940a31a5f",
+      "categoryid": "df11a3d4-0644-42ee-a38e-853ef2a860b1"
+    },
+    {
+      "name": "Errigal_Mountain",
+      "description": "The Trek to Donegal skyline, Medium",
+      "latitude": 55.0343,
+      "longitude": 8.1130,
+      "_id": "bf698cb4-10cc-47ce-905b-2e1642a76876",
+      "categoryid": "df11a3d4-0644-42ee-a38e-853ef2a860b1"
+    }
+  ]
+}
