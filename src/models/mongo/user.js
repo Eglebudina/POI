@@ -11,3 +11,10 @@ const userSchema = new Schema({
 });
 
 export const User = Mongoose.model("User", userSchema);
+
+const adminSchema = new Schema({
+  email: String,
+  password: String,
+});
+
+export const adminUser = Mongoose.model("Admin", adminSchema);
