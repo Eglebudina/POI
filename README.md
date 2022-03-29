@@ -14,8 +14,12 @@ Support the following POI Characteristics:
 - Name, Description, Category, Location, Images
 Support the following app features:
 - Create, Read, Update & Delete POIs
-- Group placemarks into categories
+- Group POIs into categories
 - Upload category Images
+API
+- Endpoints + test
+- Swagger Documentation
+- JWT security
 
 #### To achieve the project following tools and technologies were used:
 
