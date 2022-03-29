@@ -1,0 +1,13 @@
+{{> admin-menu active="admin"}}
+
+<section class="hero">
+  <div class="hero-body has-text-centered">
+    <p class="title">
+      Admin Dashboard </p>
+    <p class="box">
+     <h1>Total Number of Users in Database : {{users.length}} </h1>
+    </p>
+  </div>
+  <div class="hero-body has-text-centered">{{> list-users}}</div>
+  
+</section>
