@@ -19,17 +19,18 @@ export const categoryController = {
     validate: {
       payload: PlaceSpec,
       options: { abortEarly: false },
-      failAction: function (request, h, error) {
-        return h.view("category-view", { name: "Add place error", errors: error.details }).takeover().code(400);
+      failAction: async function (request, h, error) {
+        const category = await db.categoryStore.getCategoryById(request.params.id);
+        return h.view("category-view", { name: "Add place error", category, errors: error.details }).takeover().code(400);
       },
     },
     handler: async function (request, h) {
       const category = await db.categoryStore.getCategoryById(request.params.id);
       const newPlace = {
         name: request.payload.name,
-        description: request.payload.name,
-        latitude: request.payload.latitude,
-        longitude: request.payload.longitude,
+        description: request.payload.description,
+        latitude: Number(request.payload.latitude),
+        longitude: Number(request.payload.longitude),
       };
       await db.placeStore.addPlace(category._id, newPlace);
       return h.redirect(`/category/${category._id}`);
